@@ -69,7 +69,7 @@ git remote add --help
  
 Branch an independent line of development.
 
-How to create a branch:
+### How to create a branch:
 
 ``` git
 git branch [branch name]
@@ -86,13 +86,13 @@ You can check here: https://backlog.com/git-tutorial/using-branches/
 
 ## the staging area
 
-* git status:
+### git status:
 
 ``` git
 git status
 ```
 
-Helpful status:
+### Helpful status:
   * ' ' = unmodified
   * M = modified
   * A = added
@@ -101,7 +101,7 @@ Helpful status:
   * C = copied
   * U = updated but unmerged
 
-* Difference between the staging and the working tree:
+### Difference between the staging and the working tree:
 
 ``` git
 git diff
@@ -113,19 +113,19 @@ To show the difference between the staging and the current file version:
 git diff --staged
 ```
 
-* adding/removing a file from staging:
+### adding/removing a file from staging:
 
 ``` git
 git add [file]
 ```
 
-To remove from staging (not the file):
+### To remove from staging (not the file):
 
 ``` git
 git reset [file]
 ```
 
-* adding/removing hunks from staging:
+### adding/removing hunks from staging:
 
 ``` git
 git add -p [file]
@@ -141,7 +141,7 @@ It will navigate between all hunks in an interactive mode.
 
 After staging we can register the current state:
 
-* With message
+### With a message
 
 ``` git
 git commit -m "A brief explanation about my work"
@@ -155,7 +155,7 @@ git commit -a
 
 But, please, don't do it.
 
-* Fixing message
+### Fixing message
 
 In case you had added a wrong message, you can fix it:
 
@@ -163,7 +163,7 @@ In case you had added a wrong message, you can fix it:
 git commit --amend
 ```
 
-* Reverting commit
+### Reverting commit
 
 ``` git
 git revert [commit]
@@ -173,7 +173,7 @@ It will undo all changes from the commit and add it to the staging
 
 ## Reviewing history
 
-* log (and graph)
+### log (and graph)
 
 basic log:
 ``` git
@@ -197,7 +197,7 @@ git log --graph
 git log --graph --oneline
 ```
 
-* show branch diff
+### show branch diff
 
 ``` git
 git diff [branch1]..[branch2]
@@ -208,7 +208,7 @@ git diff HEAD..[branch2]
 git diff ..[branch2]
 ```
 
-* show commit
+### show commit
 
 ``` git
 git show [commit]
@@ -216,7 +216,7 @@ git show [commit]
 
 ## Synchronizing changes
 
-* remotes
+### remotes
 
 Once you need to synchronize your changes with a server or a team, you will need a remote:
 
@@ -224,7 +224,7 @@ Once you need to synchronize your changes with a server or a team, you will need
 git remote add [remote name] [remote url]
 ```
 
-* fetch remote / all remotes
+### Fetch remote / all remotes
 
 Fetch allows you to download the remote repository history:
 
@@ -233,7 +233,7 @@ git fetch [remote name]
 git fetch --all
 ```
 
-* pushing changes
+### Pushing changes
 
 ``` git
 git push [remote] [branch]
@@ -245,7 +245,7 @@ For new local branches, you need to set the remote branch relation:
 git push --set-upstream [remote name] [remote branch]
 ```
 
-* push --force
+### Push --force
 
 In case you need to replace a remote repository:
 
@@ -255,7 +255,7 @@ git push --force
 
 DON'T use --force on public/shared branch
 
-* pull
+### Pull
 
 To sync your local repository with the remote:
 
@@ -263,7 +263,7 @@ To sync your local repository with the remote:
 git pull [remote]
 ```
 
-* merging branches
+### Merging branches
 
 Merge is useful to bring the independent line of development to other branches:
 
@@ -277,7 +277,7 @@ In case you need to do more changes:
 git merge --no-commit [branch]
 ```
 
-* rebase branch
+### Rebase branch
 
 Rebase is similar to merge, but it reapplies the commits on top of another branch
 
@@ -320,13 +320,13 @@ in this case:
 
 To clean your repository or reset the HEAD:
 
-* Resetting a specific file:
+### Resetting a specific file:
 
 ``` git
 git reset -p [file path]
 ```
 
-* To resets the index and working tree discarding both:
+### To resets the index and working tree discarding both:
 
 ``` git
 git reset --hard [commit]
@@ -335,7 +335,7 @@ git reset --hard [commit]
 Any changes to tracked files in the working tree since `[commit]` are discarded.
 
 
-* To resets the index but not the working tree:
+### To resets the index but not the working tree:
 
 ``` git
 git reset --mixed [dommit]
@@ -343,7 +343,7 @@ git reset --mixed [dommit]
 
 The changed files are preserved but not marked for commit
 
-* To reset and keep the index and working tree:
+### To reset and keep the index and working tree:
 
 ``` git
 git reset --soft [commit]
@@ -378,19 +378,19 @@ An example of cherry pick all commits from master branch:
 git cherry-pick ..master
 ```
 
-* To continue the operation:
+### To continue the operation:
 
 ``` git
 git cherry-pick --continue
 ``` 
 
-* To finish the current operation in progress.
+### To finish the current operation in progress.
 
 ``` git
 git cherry-pick --quit
 ```
 
-* To cancel the operation:
+### To cancel the operation:
 
 ``` git
 git cherry-pick --abort
@@ -400,23 +400,26 @@ git cherry-pick --abort
 
 You can also save changes on your side. It is useful for work in progress manipulation:
 
-* To save a staging state:
+### To save a staging state:
 
 ``` git
 git stash
 ```
 
-* To load a stash:
+### To load a stash:
+
 ``` git
 git stash pop
 ```
 
-* To list all available stash:
+### To list all available stash:
+
 ``` git
 git stash list
 ```
 
-* To delete a stash:
+### To delete a stash:
+
 ``` git
 git stash drop
 ```
@@ -429,9 +432,9 @@ You need to see to understand
 
 # Getting easy
 
-* .gitignore file
+### .gitignore file
 
-* Breadcrumb about the branch. Add to your `.bash_profile`:
+### Breadcrumb about the branch. Add to your `.bash_profile`:
 
 ``` git
   # Show current git branch in the command line
@@ -443,8 +446,9 @@ You need to see to understand
   export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 ```
 
-* VSCode git support: https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
+### VSCode git support: 
+  * https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
 
-* Maybe this talk was not necessary: 
+### Maybe this talk was not necessary: 
   * https://services.github.com/on-demand/downloads/github-git-cheat-sheet/
   * http://think-like-a-git.net/
