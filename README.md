@@ -21,8 +21,8 @@
 ## Everything is already on git :)
 
 ``` git
-	git clone git@github.com:jrfferreira/git-talk.git
-	cd git-talk
+git clone git@github.com:jrfferreira/git-talk.git
+cd git-talk
 ```
 
 ---
@@ -32,16 +32,16 @@
 ## Making sure about your git avatar:
 
 ``` git
-	git config --global user.name "[name]"
-	git config --global user.email "[email address]"
+git config --global user.name "[name]"
+git config --global user.email "[email address]"
 ```
 
 ## How to start using git:
 
 ``` git
-	mkdir my-git-repository
-	cd my-git-repository
-	git init
+mkdir my-git-repository
+cd my-git-repository
+git init
 ```
 
 ## Understanding the git states:
@@ -55,9 +55,9 @@
 You can always finish your command with `--help` to check the documentation:
 
 ``` git
-	git config --help
-	git remote --help
-	git remote add --help
+git config --help
+git remote --help
+git remote add --help
 ```
 
 ---
@@ -72,14 +72,14 @@ Branch an independent line of development.
 How to create a branch:
 
 ``` git
-	git branch [branch name]
-	git checkout [branch name]
+git branch [branch name]
+git checkout [branch name]
 ```
 
 is the same as:
 
 ``` git
-	git checkout -b [branch name]
+git checkout -b [branch name]
 ```
 
 You can check here: https://backlog.com/git-tutorial/using-branches/
@@ -89,7 +89,7 @@ You can check here: https://backlog.com/git-tutorial/using-branches/
 * git status:
 
 ``` git
-	git status
+git status
 ```
 
 Helpful status:
@@ -104,35 +104,35 @@ Helpful status:
 * Difference between the staging and the working tree:
 
 ``` git
-	git diff
+git diff
 ```
 
 To show the difference between the staging and the current file version:
 
 ``` git
-	git diff --staged
+git diff --staged
 ```
 
 * adding/removing a file from staging:
 
 ``` git
-	git add [file]
+git add [file]
 ```
 
 To remove from staging (not the file):
 
 ``` git
-	git reset [file]
+git reset [file]
 ```
 
 * adding/removing hunks from staging:
 
 ``` git
-	git add -p [file]
+git add -p [file]
 ```
 
 ``` git
-	git reset -p [file]
+git reset -p [file]
 ```
 
 It will navigate between all hunks in an interactive mode.
@@ -144,13 +144,13 @@ After staging we can register the current state:
 * With message
 
 ``` git
-	git commit -m "A brief explanation about my work"
+git commit -m "A brief explanation about my work"
 ```
 
 You can also tell the command to automatically stage files that have been modified and deleted, but it will not affect new files:
 
 ``` git
-	git commit -a
+git commit -a
 ```
 
 But, please, don't do it.
@@ -160,13 +160,13 @@ But, please, don't do it.
 In case you had added a wrong message, you can fix it:
 
 ``` git
-	git commit --amend
+git commit --amend
 ```
 
 * Reverting commit
 
 ``` git
-	git revert [commit]
+git revert [commit]
 ```
 
 It will undo all changes from the commit and add it to the staging
@@ -177,41 +177,41 @@ It will undo all changes from the commit and add it to the staging
 
 basic log:
 ``` git
-	git log
+git log
 ```
 
 To follow all changes of a file:
 ``` git
-	git log --follow [file path]
+git log --follow [file path]
 ```
 
 The see the changes:
 ``` git
-	git log -p [file path]
+git log -p [file path]
 ```
 
 Do you need a visual help?
 
 ``` git
-	git log --graph
-	git log --graph --oneline
+git log --graph
+git log --graph --oneline
 ```
 
 * show branch diff
 
 ``` git
-	git diff [branch1]..[branch2]
+git diff [branch1]..[branch2]
 ```
 or
 ``` git
-	git diff HEAD..[branch2]
-	git diff ..[branch2]
+git diff HEAD..[branch2]
+git diff ..[branch2]
 ```
 
 * show commit
 
 ``` git
-	git show [commit]
+git show [commit]
 ```
 
 ## Synchronizing changes
@@ -221,7 +221,7 @@ or
 Once you need to synchronize your changes with a server or a team, you will need a remote:
 
 ``` git
-	git remote add [remote name] [remote url]
+git remote add [remote name] [remote url]
 ```
 
 * fetch remote / all remotes
@@ -229,20 +229,20 @@ Once you need to synchronize your changes with a server or a team, you will need
 Fetch allows you to download the remote repository history:
 
 ``` git
-	git fetch [remote name]
-	git fetch --all
+git fetch [remote name]
+git fetch --all
 ```
 
 * pushing changes
 
 ``` git
-	git push [remote] [branch]
+git push [remote] [branch]
 ```
 
 For new local branches, you need to set the remote branch relation:
 
 ``` git
-	git push --set-upstream [remote name] [remote branch]
+git push --set-upstream [remote name] [remote branch]
 ```
 
 * push --force
@@ -250,7 +250,7 @@ For new local branches, you need to set the remote branch relation:
 In case you need to replace a remote repository:
 
 ``` git
-	git push --force
+git push --force
 ```
 
 DON'T use --force on public/shared branch
@@ -260,7 +260,7 @@ DON'T use --force on public/shared branch
 To sync your local repository with the remote:
 
 ``` git
-	git pull [remote]
+git pull [remote]
 ```
 
 * merging branches
@@ -268,13 +268,13 @@ To sync your local repository with the remote:
 Merge is useful to bring the independent line of development to other branches:
 
 ``` git
-	git merge [branch]
+git merge [branch]
 ```
 
 In case you need to do more changes:
 
 ``` git
-	git merge --no-commit [branch]
+git merge --no-commit [branch]
 ```
 
 * rebase branch
@@ -282,7 +282,7 @@ In case you need to do more changes:
 Rebase is similar to merge, but it reapplies the commits on top of another branch
 
 ``` git
-	git rebase [branch]
+git rebase [branch]
 ```
 
 Check more in https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333
@@ -323,13 +323,13 @@ To clean your repository or reset the HEAD:
 * Resetting a specific file:
 
 ``` git
-	git reset -p [file path]
+git reset -p [file path]
 ```
 
 * To resets the index and working tree discarding both:
 
 ``` git
-	git reset --hard [commit]
+git reset --hard [commit]
 ```
 
 Any changes to tracked files in the working tree since `[commit]` are discarded.
@@ -338,7 +338,7 @@ Any changes to tracked files in the working tree since `[commit]` are discarded.
 * To resets the index but not the working tree:
 
 ``` git
-	git reset --mixed [dommit]
+git reset --mixed [dommit]
 ```
 
 The changed files are preserved but not marked for commit
@@ -346,7 +346,7 @@ The changed files are preserved but not marked for commit
 * To reset and keep the index and working tree:
 
 ``` git
-	git reset --soft [commit]
+git reset --soft [commit]
 ```
 
 This leaves all your changed files "Changes to be committed"
@@ -357,11 +357,11 @@ This leaves all your changed files "Changes to be committed"
 If you export `git diff` to a file, you can apply it in a different situation:
 
 ``` git
-	git diff > my-patch.diff
+git diff > my-patch.diff
 ```
 
 ``` git
-  $git apply my-patch.diff
+git apply my-patch.diff
 ```
 
 ## Cherry pick
@@ -369,31 +369,31 @@ If you export `git diff` to a file, you can apply it in a different situation:
 Pick an exactly commit to where you're:
 
 ``` git
-	git cherry-pick [commit hash]
+git cherry-pick [commit hash]
 ```
 
 An example of cherry pick all commits from master branch:
 
 ``` git
-	git cherry-pick ..master
+git cherry-pick ..master
 ```
 
 * To continue the operation:
 
 ``` git
-	git cherry-pick --continue
+git cherry-pick --continue
 ``` 
 
 * To finish the current operation in progress.
 
 ``` git
-	git cherry-pick --quit
+git cherry-pick --quit
 ```
 
 * To cancel the operation:
 
 ``` git
-	git cherry-pick --abort
+git cherry-pick --abort
 ```
 
 ## Stash
@@ -403,22 +403,22 @@ You can also save changes on your side. It is useful for work in progress manipu
 * To save a staging state:
 
 ``` git
-	git stash
+git stash
 ```
 
 * To load a stash:
 ``` git
-	git stash pop
+git stash pop
 ```
 
 * To list all available stash:
 ``` git
-	git stash list
+git stash list
 ```
 
 * To delete a stash:
 ``` git
-	git stash drop
+git stash drop
 ```
 
 ## The .git folder
