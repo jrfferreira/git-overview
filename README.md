@@ -62,7 +62,7 @@ You can always finish your command with `--help` to check the documentation:
 
 ---
 
-# Hands on
+# Hands-on
 
 
 ## Understanding branches:
@@ -101,7 +101,7 @@ Helpful status:
   * C = copied
   * U = updated but unmerged
 
-* Diference between the staging and the working tree:
+* Difference between the staging and the working tree:
 
 ``` bash
   $ git diff
@@ -135,7 +135,7 @@ To remove from staging (not the file):
   $ git reset -p [file]
 ```
 
-It will navigate between all hunks in a interative mode.
+It will navigate between all hunks in an interactive mode.
 
 ## Committing
 
@@ -239,7 +239,7 @@ Fetch allows you to download the remote repository history:
   $ git push [remote] [branch]
 ```
 
-For new local branchs, you need to set the remote branch relation:
+For new local branches, you need to set the remote branch relation:
 
 ``` bash
   $ git push --set-upstream [remote name] [remote branch]
@@ -263,9 +263,9 @@ To sync your local repository with the remote:
   $ git pull [remote]
 ```
 
-* merging branchs
+* merging branches
 
-Merge is useful to bring the independent line of development to other branch:
+Merge is useful to bring the independent line of development to other branches:
 
 ``` bash
   $ git merge [branch]
@@ -279,13 +279,13 @@ In case you need to do more changes:
 
 * rebase branch
 
-Rebase is similar to merge, but it reapply the commits on top of another branch
+Rebase is similar to merge, but it reapplies the commits on top of another branch
 
 ``` bash
   $ git rebase [branch]
 ```
 
-Check more in: https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333
+Check more in https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333
 
   * Use merge in cases where you want a set of commits to be clearly grouped together in history
   * Use rebase when you want to keep a linear commit history
@@ -320,13 +320,13 @@ in this case:
 
 To clean your repository or reset the HEAD:
 
-* Reseting a specific file:
+* Resetting a specific file:
 
 ``` bash
   $ git reset -p [file path]
 ```
 
-* To resets the index and working tree discarting both:
+* To resets the index and working tree discarding both:
 
 ``` bash
   $ git reset --hard [commit]
@@ -366,13 +366,13 @@ If you export `git diff` to a file, you can apply it in a different situation:
 
 ## Cherry pick
 
-Pick a exactly commit to where you're:
+Pick an exactly commit to where you're:
 
 ``` bash
   $ git cherry-pick [commit hash]
 ```
 
-An example to cherry pick all commits from master branch:
+An example of cherry pick all commits from master branch:
 
 ``` bash
   $ git cherry-pick ..master
@@ -384,7 +384,7 @@ An example to cherry pick all commits from master branch:
   $ git cherry-pick --continue
 ``` 
 
-* To finish  the current operation in progress.
+* To finish the current operation in progress.
 
 ``` bash
   $ git cherry-pick --quit
