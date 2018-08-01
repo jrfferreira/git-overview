@@ -69,7 +69,7 @@ git remote add --help
  
 Branch an independent line of development.
 
-### How to create a branch:
+### How to create a branch:
 
 ``` git
 git branch [branch name]
@@ -92,7 +92,7 @@ You can check here: https://backlog.com/git-tutorial/using-branches/
 git status
 ```
 
-### Helpful status:
+### Helpful status:
   * ' ' = unmodified
   * M = modified
   * A = added
@@ -195,6 +195,7 @@ Do you need a visual help?
 ``` git
 git log --graph
 git log --graph --oneline
+git log --graph --decorate
 ```
 
 ### show branch diff
@@ -263,6 +264,8 @@ To sync your local repository with the remote:
 git pull [remote]
 ```
 
+This command is a sequence of `git fetch` and `git merge`
+
 ### Merging branches
 
 Merge is useful to bring the independent line of development to other branches:
@@ -295,6 +298,16 @@ Check more in https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c11
 ---
 
 # To add "git" in your Linkedin
+
+## Reflog
+
+``` git
+git reflog
+```
+
+The reflog is an ordered list of the commits that HEAD has pointed to.
+The reflog isn't part of the repo itself (it's stored separately to the commits themselves)
+It isn't included in pushes, fetches or clones; it's purely local.
 
 ## Conflicts
 
