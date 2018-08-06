@@ -198,6 +198,35 @@ git log --graph --oneline
 git log --graph --decorate
 ```
 
+### Log + search
+
+To search in commit messages:
+
+``` git
+git log --grep "message"
+```
+
+By default, grep is case senstive, you can use `-i` to ignore it:
+
+``` git
+git log --grep -i "message"
+```
+
+To search in the history changes:
+
+``` git
+git log -G"message"
+git log -S"message"
+```
+
+Helpful combinations:
+
+``` git
+git log --color-words -S"message"
+git log -p -S"message"
+git log --color-words -p -S"message"
+```
+
 ### show branch diff
 
 ``` git
