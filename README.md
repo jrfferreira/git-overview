@@ -244,6 +244,12 @@ git diff ..[branch2]
 git show [commit]
 ```
 
+### Checking author
+
+``` git
+git blame [path]
+```
+
 ## Synchronizing changes
 
 ### remotes
