@@ -20,7 +20,7 @@
   
 ## Everything is already on git :)
 
-``` git
+```
 git clone git@github.com:jrfferreira/git-talk.git
 cd git-talk
 ```
@@ -54,7 +54,7 @@ git init
 
 You can always finish your command with `--help` to check the documentation:
 
-``` git
+```
 git config --help
 git remote --help
 git remote add --help
