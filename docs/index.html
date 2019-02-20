@@ -1,7 +1,20 @@
-# Git Talk
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
----
+    <title>GIT Talk</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/night.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
 
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"># Git Talk
+</script></section><section  data-markdown><script type="text/template">
 ## First thing first
 
 
@@ -10,9 +23,7 @@
 * Historical control of your files
 * Any kind of file
 * https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Nice to know
 
 * Missing git in your machine? https://git-scm.com/
@@ -20,18 +31,14 @@
   * Github is a service using git as a platform
   * Other services: gitlab, bitbucket
 * You don't need a remote repository to work with git
-  
----
-
+  </script></section><section  data-markdown><script type="text/template">
 ### Everything is already on git
 
 ``` git
 git clone git@github.com:jrfferreira/git-talk.git
 cd git-talk
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## From the beginning
 
 ### Making sure about your git avatar:
@@ -48,17 +55,13 @@ mkdir my-git-repository
 cd my-git-repository
 git init
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Understanding the git states:
 
 * Working tree: Your work
 * Index / Staging area: What do you want git to know
 * HEAD / .git directory (repository): Where all changes snapshots are saved
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### The help command
 
 You can always finish your command with `--help` to check the documentation:
@@ -68,13 +71,9 @@ git config --help
 git remote --help
 git remote add --help
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Hands-on
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Understanding branches:
  
 Branch an independent line of development.
@@ -93,9 +92,7 @@ git checkout -b [branch name]
 ```
 
 You can check here: https://backlog.com/git-tutorial/using-branches/
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### the staging area
 
 #### git status:
@@ -112,9 +109,7 @@ git status
   * R = renamed
   * C = copied
   * U = updated but unmerged
-  
----
-
+  </script></section><section  data-markdown><script type="text/template">
 #### Difference between the staging and the working tree:
 
 ``` git
@@ -126,9 +121,7 @@ git diff
 ``` git
 git diff --staged
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### adding/removing a file from staging:
 
 ``` git
@@ -140,9 +133,7 @@ git add [file]
 ``` git
 git reset [file]
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### adding/removing hunks from staging:
 
 ``` git
@@ -154,15 +145,11 @@ git reset -p [file]
 ```
 
 It will navigate between all hunks in an interactive mode.
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Committing
 
 After staging we can register the current state:
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### With a message
 
 ``` git
@@ -176,9 +163,7 @@ git commit -a
 ```
 
 But, please, don't do it.
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Fixing message
 
 In case you had added a wrong message, you can fix it:
@@ -186,9 +171,7 @@ In case you had added a wrong message, you can fix it:
 ``` git
 git commit --amend
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Reverting commit
 
 ``` git
@@ -196,13 +179,9 @@ git revert [commit]
 ```
 
 It will undo all changes from the commit and add it to the staging
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Reviewing history
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### log (and graph)
 
 basic log:
@@ -219,9 +198,7 @@ The see the changes:
 ``` git
 git log -p [file path]
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 Do you need a visual help?
 
 ``` git
@@ -229,9 +206,7 @@ git log --graph
 git log --graph --oneline
 git log --graph --decorate
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Log + search
 
 To search in commit messages:
@@ -245,9 +220,7 @@ By default, grep is case senstive, you can use `-i` to ignore it:
 ``` git
 git log --grep -i "message"
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 To search in the history changes:
 
 ``` git
@@ -262,9 +235,7 @@ git log --color-words -S"message"
 git log -p -S"message"
 git log --color-words -p -S"message"
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### show branch diff
 
 ``` git
@@ -275,9 +246,7 @@ or
 git diff HEAD..[branch2]
 git diff ..[branch2]
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### show commit
 
 ``` git
@@ -289,13 +258,9 @@ git show [commit]
 ``` git
 git blame [path]
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Synchronizing changes
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### remotes
 
 Once you need to synchronize your changes with a server or a team, you will need a remote:
@@ -303,9 +268,7 @@ Once you need to synchronize your changes with a server or a team, you will need
 ``` git
 git remote add [remote name] [remote url]
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Fetch remote / all remotes
 
 Fetch allows you to download the remote repository history:
@@ -326,9 +289,7 @@ For new local branches, you need to set the remote branch relation:
 ``` git
 git push --set-upstream [remote name] [remote branch]
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Push --force
 
 In case you need to replace a remote repository:
@@ -338,9 +299,7 @@ git push --force
 ```
 
 DON'T use --force on public/shared branch
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Pull
 
 To sync your local repository with the remote:
@@ -350,9 +309,7 @@ git pull [remote]
 ```
 
 This command is a sequence of `git fetch` and `git merge`
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Merging branches
 
 Merge is useful to bring the independent line of development to other branches:
@@ -366,9 +323,7 @@ In case you need to do more changes:
 ``` git
 git merge --no-commit [branch]
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### Rebase branch
 
 Rebase is similar to merge, but it reapplies the commits on top of another branch
@@ -383,13 +338,9 @@ Check more in https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c11
   * Use rebase when you want to keep a linear commit history
   * DON’T use rebase on a public/shared branch
 
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Do not add "git" to your Linkedin before the next topics
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Reflog
 
 ``` git
@@ -399,16 +350,12 @@ git reflog
 The reflog is an ordered list of the commits that HEAD has pointed to.
 The reflog isn't part of the repo itself (it's stored separately to the commits themselves)
 It isn't included in pushes, fetches or clones; it's purely local.
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Conflicts
 
 Sometimes, the remote or branch that you want to get changes can contain a different hunk.
 In this case, git may not be able to auto-fix this, and you will need to act.
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 Example:
 
 ``` git
@@ -423,9 +370,7 @@ and other person added this.
 in this case:
 * Everything from `<<<<<<< HEAD` to `=======` is related to your changes
 * Everything from `=======` to `>>>>>>> playground` is what is coming from `playground` branch.
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Reseting
 
 To clean your repository or reset the HEAD:
@@ -443,9 +388,7 @@ git reset --hard [commit]
 ```
 
 Any changes to tracked files in the working tree since `[commit]` are discarded.
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 
 #### To resets the index but not the working tree:
 
@@ -462,9 +405,7 @@ git reset --soft [commit]
 ```
 
 This leaves all your changed files "Changes to be committed"
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Patching
 
 If you export `git diff` to a file, you can apply it in a different situation:
@@ -476,9 +417,7 @@ git diff > my-patch.diff
 ``` git
 git apply my-patch.diff
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Cherry pick
 
 Pick an exactly commit to where you're:
@@ -492,9 +431,7 @@ An example of cherry pick all commits from master branch:
 ``` git
 git cherry-pick ..master
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### To continue the operation:
 
 ``` git
@@ -512,9 +449,7 @@ git cherry-pick --quit
 ``` git
 git cherry-pick --abort
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Stash
 
 You can also save changes on your side. It is useful for work in progress manipulation:
@@ -542,19 +477,13 @@ git stash list
 ``` git
 git stash drop
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### The .git folder
 
 You need to see to understand
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 #### .gitignore file
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Breadcrumb about the branch. Add to your `.bash_profile`:
 
 ``` git
@@ -566,20 +495,67 @@ You need to see to understand
   
   export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Extras
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### VSCode git support:
 
 https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ### Maybe this talk was not necessary: 
 https://services.github.com/on-demand/downloads/github-git-cheat-sheet/
 
 http://think-like-a-git.net/
+</script></section></div>
+    </div>
+
+    <script src="./lib/js/head.min.js"></script>
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
