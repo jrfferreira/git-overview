@@ -9,13 +9,13 @@
 
 * Historical control of your files
 * Any kind of file
-* <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
+* https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
 
 ---
 
 ### Nice to know
 
-* Missing git in your machine? <https://git-scm.com/>
+* Missing git in your machine? https://git-scm.com/
 * Github isn't git
   * Github is a service using git as a platform
   * Other services: gitlab, bitbucket
@@ -93,7 +93,7 @@ is the same as:
 git checkout -b [branch name]
 ```
 
-You can check here: <https://backlog.com/git-tutorial/using-branches/>
+You can check here: https://backlog.com/git-tutorial/using-branches/
 
 ---
 
@@ -378,7 +378,7 @@ Rebase is similar to merge, but it reapplies the commits on top of another branc
 git rebase [branch]
 ```
 
-Check more in <https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333>
+Check more in https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333
 
   * Use merge in cases where you want a set of commits to be clearly grouped together in history
   * Use rebase when you want to keep a linear commit history
@@ -576,11 +576,11 @@ You need to see to understand
 
 ### VSCode git support:
 
-<https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode>
+https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
 
 ---
 
 ### Maybe this talk was not necessary: 
-<https://services.github.com/on-demand/downloads/github-git-cheat-sheet>
+https://services.github.com/on-demand/downloads/github-git-cheat-sheet
 
-<http://think-like-a-git.net/>
+http://think-like-a-git.net/
