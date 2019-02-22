@@ -387,7 +387,7 @@ Check more in https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c11
 
 ---
 
-## Do not add "git" to your Linkedin before the next topics
+## Going deeper
 
 ---
 
@@ -584,3 +584,7 @@ https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
 https://services.github.com/on-demand/downloads/github-git-cheat-sheet
 
 http://think-like-a-git.net/
+
+---
+
+Thank you! (Obrigado!)
