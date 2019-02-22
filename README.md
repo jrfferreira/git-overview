@@ -1,11 +1,10 @@
-# Git Talk
+# Git Overview
 
-[document](https://jrfferreira.github.io/git-talk/) | [slides](https://jrfferreira.github.io/git-talk/slides/)
+[document](https://jrfferreira.github.io/git-overview/) | [slides](https://jrfferreira.github.io/git-overview/slides/)
 
 ---
 
 ## First thing first
-
 
 ### What is GIT?
 
