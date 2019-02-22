@@ -1,5 +1,7 @@
 # Git Talk
 
+[document](https://jrfferreira.github.io/git-talk/) | [slides](https://jrfferreira.github.io/git-talk/slides/)
+
 ---
 
 ## First thing first
@@ -13,7 +15,7 @@
 
 ---
 
-### Nice to know
+## Nice to know
 
 * Missing git in your machine? https://git-scm.com/
 * Github isn't git
@@ -23,7 +25,7 @@
   
 ---
 
-### Everything is already on git
+## Everything is already on git
 
 ``` git
 git clone git@github.com:jrfferreira/git-talk.git
@@ -51,7 +53,7 @@ git init
 
 ---
 
-### Understanding the git states:
+## Understanding the git states:
 
 * Working tree: Your work
 * Index / Staging area: What do you want git to know
@@ -60,18 +62,13 @@ git init
 
 ---
 
-### The help command
+## The help command
 
 You can always finish your command with `--help` to check the documentation:
 
 ``` git
 git config --help
 git remote --help
-git remote add --help
-```
-
----
-
 ## Hands-on
 
 ---
@@ -97,15 +94,15 @@ You can check here: https://backlog.com/git-tutorial/using-branches/
 
 ---
 
-### the staging area
+## the staging area
 
-#### git status:
+### git status:
 
 ``` git
 git status
 ```
 
-#### Helpful status:
+### Helpful status:
   * ' ' = unmodified
   * M = modified
   * A = added
@@ -116,13 +113,13 @@ git status
   
 ---
 
-#### Difference between the staging and the working tree:
+### Difference between the staging and the working tree:
 
 ``` git
 git diff
 ```
 
-##### To show the difference between the staging and the current file version:
+#### To show the difference between the staging and the current file version:
 
 ``` git
 git diff --staged
@@ -130,13 +127,13 @@ git diff --staged
 
 ---
 
-#### adding/removing a file from staging:
+### adding/removing a file from staging:
 
 ``` git
 git add [file]
 ```
 
-#### To remove from staging (not the file):
+### To remove from staging (not the file):
 
 ``` git
 git reset [file]
@@ -144,7 +141,7 @@ git reset [file]
 
 ---
 
-#### adding/removing hunks from staging:
+### adding/removing hunks from staging:
 
 ``` git
 git add -p [file]
@@ -158,13 +155,13 @@ It will navigate between all hunks in an interactive mode.
 
 ---
 
-### Committing
+## Committing
 
 After staging we can register the current state:
 
 ---
 
-#### With a message
+### With a message
 
 ``` git
 git commit -m "A brief explanation about my work"
@@ -180,7 +177,7 @@ But, please, don't do it.
 
 ---
 
-#### Fixing message
+### Fixing message
 
 In case you had added a wrong message, you can fix it:
 
@@ -190,7 +187,7 @@ git commit --amend
 
 ---
 
-#### Reverting commit
+### Reverting commit
 
 ``` git
 git revert [commit]
@@ -200,11 +197,11 @@ It will undo all changes from the commit and add it to the staging
 
 ---
 
-### Reviewing history
+## Reviewing history
 
 ---
 
-#### log (and graph)
+### log (and graph)
 
 basic log:
 ``` git
@@ -233,7 +230,7 @@ git log --graph --decorate
 
 ---
 
-#### Log + search
+### Log + search
 
 To search in commit messages:
 
@@ -266,7 +263,7 @@ git log --color-words -p -S"message"
 
 ---
 
-#### show branch diff
+### show branch diff
 
 ``` git
 git diff [branch1]..[branch2]
@@ -279,13 +276,13 @@ git diff ..[branch2]
 
 ---
 
-#### show commit
+### show commit
 
 ``` git
 git show [commit]
 ```
 
-#### Checking author
+### Checking author
 
 ``` git
 git blame [path]
@@ -293,11 +290,9 @@ git blame [path]
 
 ---
 
-### Synchronizing changes
+## Synchronizing changes
 
----
-
-#### remotes
+### remotes
 
 Once you need to synchronize your changes with a server or a team, you will need a remote:
 
@@ -307,7 +302,7 @@ git remote add [remote name] [remote url]
 
 ---
 
-#### Fetch remote / all remotes
+### Fetch remote / all remotes
 
 Fetch allows you to download the remote repository history:
 
@@ -316,7 +311,9 @@ git fetch [remote name]
 git fetch --all
 ```
 
-#### Pushing changes
+---
+
+### Pushing changes
 
 ``` git
 git push [remote] [branch]
@@ -330,7 +327,7 @@ git push --set-upstream [remote name] [remote branch]
 
 ---
 
-#### Push --force
+### Push --force
 
 In case you need to replace a remote repository:
 
@@ -342,7 +339,7 @@ DON'T use --force on public/shared branch
 
 ---
 
-#### Merging branches
+### Merging branches
 
 Merge is useful to bring the independent line of development to other branches:
 
@@ -358,7 +355,7 @@ git merge --no-commit [branch]
 
 ---
 
-#### Pull (syncing)
+### Pull (syncing)
 
 To sync your local repository with the remote:
 
@@ -370,7 +367,7 @@ This command is a sequence of `git fetch` and `git merge`
 
 ---
 
-#### Rebase branch
+### Rebase branch
 
 Rebase is similar to merge, but it reapplies the commits on top of another branch
 
@@ -427,17 +424,17 @@ in this case:
 
 ---
 
-### Reseting
+## Reseting
 
 To clean your repository or reset the HEAD:
 
-#### Resetting a specific file:
+### Resetting a specific file:
 
 ``` git
 git reset -p [file path]
 ```
 
-#### To resets the index and working tree discarding both:
+### To resets the index and working tree discarding both:
 
 ``` git
 git reset --hard [commit]
@@ -448,7 +445,7 @@ Any changes to tracked files in the working tree since `[commit]` are discarded.
 ---
 
 
-#### To resets the index but not the working tree:
+### To resets the index but not the working tree:
 
 ``` git
 git reset --mixed [dommit]
@@ -456,7 +453,7 @@ git reset --mixed [dommit]
 
 The changed files are preserved but not marked for commit
 
-#### To reset and keep the index and working tree:
+### To reset and keep the index and working tree:
 
 ``` git
 git reset --soft [commit]
@@ -466,7 +463,7 @@ This leaves all your changed files "Changes to be committed"
 
 ---
 
-### Patching
+## Patching
 
 If you export `git diff` to a file, you can apply it in a different situation:
 
@@ -480,7 +477,7 @@ git apply my-patch.diff
 
 ---
 
-### Cherry pick
+## Cherry pick
 
 Pick an exactly commit to where you're:
 
@@ -496,19 +493,19 @@ git cherry-pick ..master
 
 ---
 
-#### To continue the operation:
+### To continue the operation:
 
 ``` git
 git cherry-pick --continue
 ``` 
 
-#### To finish the current operation in progress.
+### To finish the current operation in progress.
 
 ``` git
 git cherry-pick --quit
 ```
 
-#### To cancel the operation:
+### To cancel the operation:
 
 ``` git
 git cherry-pick --abort
@@ -516,29 +513,29 @@ git cherry-pick --abort
 
 ---
 
-### Stash
+## Stash
 
 You can also save changes on your side. It is useful for work in progress manipulation:
 
-#### To save a staging state:
+### To save a staging state:
 
 ``` git
 git stash
 ```
 
-#### To load a stash:
+### To load a stash:
 
 ``` git
 git stash pop
 ```
 
-#### To list all available stash:
+### To list all available stash:
 
 ``` git
 git stash list
 ```
 
-#### To delete a stash:
+### To delete a stash:
 
 ``` git
 git stash drop
@@ -546,17 +543,21 @@ git stash drop
 
 ---
 
-### The .git folder
+## The .git folder
 
 You need to see to understand
 
 ---
 
-#### .gitignore file
+## The .gitignore file
+
+https://github.com/github/gitignore
 
 ---
 
-### Breadcrumb about the branch. Add to your `.bash_profile`:
+## Breadcrumb about the branch. 
+
+Add to your `.bash_profile`:
 
 ``` git
   # Show current git branch in the command line
@@ -574,7 +575,7 @@ You need to see to understand
 
 ---
 
-### Git integration:
+## Git integration:
 
 * Atom: https://blog.atom.io/2014/03/13/git-integration.html
 * VS Code: https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
@@ -583,7 +584,8 @@ You need to see to understand
 
 ---
 
-### Maybe this talk was not necessary: 
+## Maybe this talk was not necessary: 
+
 https://services.github.com/on-demand/downloads/github-git-cheat-sheet
 
 http://think-like-a-git.net/
