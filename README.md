@@ -27,8 +27,8 @@
 ## Everything is already on git
 
 ``` git
-git clone git@github.com:jrfferreira/git-talk.git
-cd git-talk
+git clone git@github.com:jrfferreira/git-overview.git
+cd git-overview
 ```
 
 ---
@@ -351,6 +351,8 @@ In case you need to do more changes:
 ``` git
 git merge --no-commit [branch]
 ```
+
+You can use different modes to, like `--no-ff` or `--squash`
 
 ---
 
