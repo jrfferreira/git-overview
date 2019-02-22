@@ -574,9 +574,12 @@ You need to see to understand
 
 ---
 
-### VSCode git support:
+### Git integration:
 
-https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
+* Atom: https://blog.atom.io/2014/03/13/git-integration.html
+* VS Code: https://code.visualstudio.com/docs/editor/versioncontrol#_git-patchdiff-mode
+* Sublime: https://github.com/SublimeGit/SublimeGit
+* Emacs: ❤ https://magit.vc/ ❤
 
 ---
 
